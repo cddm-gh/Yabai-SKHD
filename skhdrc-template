@@ -1,0 +1,63 @@
+# Changing window focus
+
+## change window focus within space
+alt - j : yabai -m window --focus west
+alt - k : yabai -m window --focus south
+alt - l : yabai -m window --focus east
+alt - i : yabai -m window --focus north
+
+## changing window focus between external displays (top and bottom)
+alt - t : yabai -m display --focus north
+alt - b : yabai -m display --focus south
+
+# Modifying the current layout on the screen
+
+## rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+## flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+## flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+## toggle widow float
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Modifying window size
+## maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+## balance out tree windows (resize to occupy same area)
+shift + alt - e : yabai -m space --balance
+
+# Moving Windows Around
+## swap windows
+shift + alt - l : yabai -m window --swap west
+shift + alt - k : yabai -m window --swap south
+shift + alt - i : yabai -m window --swap north
+shift + alt - j : yabai -m window --swap east
+
+## move window and split
+ctrl + alt - l : yabai -m window --warp west
+ctrl + alt - k : yabai -m window --warp south
+ctrl + alt - i : yabai -m window --warp north
+ctrl + alt - j : yabai -m window --warp east
+
+## move window to display top and bottom
+shift + alt - u : yabai -m window --display north; yabai -m display --focus north;
+shift + alt - b : yabai -m window --display south; yabai -m display --focus south;
+
+## move window to prev or next space/desktop
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
+
+## move window to space/desktop #
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3 
+
+
+# Start / Stop yabai
+ctrl + alt - q : brew services stop yabai
+ctrl + atl - s : brew services start yabai
